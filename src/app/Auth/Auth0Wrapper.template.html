@@ -1,0 +1,6 @@
+<Callback *ngIf="isAuthenticated == 'loading'"></Callback>
+<Login *ngIf="!isAuthenticated" (loginHandler)="login()"></Login>
+
+<app-root *ngIf="isAuthenticated === true" (logout)="logout()"></app-root>
+
+<router-outlet></router-outlet>
